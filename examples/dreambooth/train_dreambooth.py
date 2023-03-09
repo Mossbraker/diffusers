@@ -113,7 +113,7 @@ def parse_args(input_args=None):
     parser.add_argument(
         "--save_infer_steps",
         type=int,
-        default=20,
+        default=30,
         help="The number of inference steps for save sample.",
     )
     parser.add_argument(
@@ -283,7 +283,7 @@ class DreamBoothDataset(Dataset):
         concepts_list,
         tokenizer,
         with_prior_preservation=True,
-        size=512,
+        size=768,
         center_crop=False,
         num_class_images=None,
         pad_tokens=False,
